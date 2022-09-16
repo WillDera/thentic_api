@@ -50,7 +50,7 @@ app.post("/mint_nft", jsonParser, async (req, res) => {
 
   const data = {
     key: process.env.API_KEY,
-    chain_id: 97,
+    chain_id: Number(process.env.CHAIN_ID),
     contract: process.env.NFT_Contract,
     nft_id: user_req.id,
     nft_data: user_req.shortInfo,
